@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Commission</title>
+    <script>
+        var f;
+        var sales,comm;
+         function findsc(f){
+            sales = f.a.value;
+            if(sales<50){
+                comm=0;
+            }
+            else if((sales>=50) && (sales<=500)){
+                comm=(sales*10)/100;
+            }
+            else{
+                comm=50 +(8*sales/100);
+            }
+            f.b.value = comm + "  Rs/-";
+         }
+    </script>
+</head>
+<body bgcolor="pink">
+    <br><br><hr><i><b><h2><marquee direction="right">Sales Commission</marquee></h2></b></i>
+    <form>
+        <pre>
+            <center>
+                <br><br><hr><br><br>
+                Total sales (in Rupees):  <input type="text" name="a"> <br>
+                                    <input type="button" value="Find Commission" onclick="findsc(this.form)"><br>
+                Your sales commission is:  <input type="text" name="b">
+                <br><br><hr><br><br>                    
+            </center>
+        </pre>
+    </form>
+</body>
+</html>
